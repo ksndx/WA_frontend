@@ -1,0 +1,30 @@
+body {
+  background-color: blue;
+  color: white;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.side_left {
+  display: flex;
+  align-content: center;
+  writing-mode: vertical-rl;
+}
+.side_right {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  order: 1;
+}
+.mid {
+  display: flex;
+  justify-content: space-between;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+}
