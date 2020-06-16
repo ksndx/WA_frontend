@@ -1,6 +1,13 @@
 body {
-  background-color: blue;
-  color: white;
+  background-image: url('back.jpg');
+  color: darkorange;/*rosybrown;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+  height: 100vh;
+  font-family: "Circular-Medium","HelveticaNeue",
+    "Helvetica Neue",Helvetica,Arial,sans-serif;
+
 }
 header {
   display: flex;
@@ -9,22 +16,103 @@ header {
 
 .side_left {
   display: flex;
-  align-content: center;
+  
   writing-mode: vertical-rl;
+  transform: rotate(0deg);
+  height: 50vh;
+  justify-content: flex-end;
 }
 .side_right {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   order: 1;
+  height: 50vh;
 }
 .mid {
   display: flex;
   justify-content: space-between;
+  
 }
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 4.7em;
+}
+button{
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid;
+  left: 50vw;
+  padding: 8px 20px;
+}
+
+button:hover{
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: 1px solid white;
+  transition: all 1s ease-out; /*при провождении мышкой*/
+
+}
+
+h2{
+  text-align: center;
+}
+
+/*PHONE*/
+@media only screen and (max-width: 425px){
+  .center{
+   
+    font-size: 2em;
+
+  }
+  h2{
+     display: flex;
+      justify-content: center;
+      align-content: center;
+      width: 100vw;
+  }
+  div.center{
+    height: 100vh;
+  }
+  .side_left{
+    display: none;
+  }
+  .side_right{
+    display: none;
+  }
+  body{
+    background-position: center center;
+      color: rosybrown;
+  }
+}
+/*TABLETTE*/
+@media only screen and (min-width: 425px) and (max-width: 768px){
+  .center{
+    font-size: 2.5em;
+    height: 100vh;
+    margin-top: 10vh;
+  }
+  body{
+    background-position: center center;
+  }
+  .side_left{
+    display: flex;
+    writing-mode: horizontal-tb;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .side_right{
+    display: flex;
+    writing-mode: horizontal-tb;
+    flex-direction: row;
+    transform: rotate(0deg);
+
+  }
 }
